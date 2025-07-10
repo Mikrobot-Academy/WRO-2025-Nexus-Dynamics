@@ -1,4 +1,4 @@
-Team NEO NEXUS – WRO 2025 Future Engineers
+Team  NEXUS DYNAMICS – WRO 2025 Future Engineers
 ===========================================
 Welcome to the official repository of Team NEO NEXUS, proudly representing Mikrobot Academy from Ghana in the WRO 2025 Future Engineers category.
 
@@ -19,5 +19,5 @@ A DC motor for propulsion,
 
 This repo contains all our code, schematics, planning documentation, and media that showcase our journey from concept to competition.
 
-We are Team NEO NEXUS future-focused, logic-driven, and proudly engineered for the WRO world stage.
+We are Team NEXUS DYNAMICS future-focused, logic-driven, and proudly engineered for the WRO world stage.
 
