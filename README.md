@@ -1,16 +1,23 @@
-Nexus Dynamics
-====
+Team NEO NEXUS – WRO 2025 Future Engineers
+===========================================
+Welcome to the official repository of Team NEO NEXUS, proudly representing Mikrobot Academy from Ghana in the WRO 2025 Future Engineers category.
 
-This repository contains engineering materials of our self-driven vehicle's model participating in the WRO Future Engineers competition in the season 2025.
+![image](https://github.com/user-attachments/assets/aaf8859e-a785-4ffc-8ddb-c9662de4f2f8)                   ![image](https://github.com/user-attachments/assets/8abd6526-0eed-4adb-95cb-b1cffd24fcd1)
 
-## Content
+Our mission:
+============
+To design and build a fully autonomous vehicle capable of navigating a dynamic arena, completing three full laps in both clockwise and anticlockwise directions, detecting walls, handling corners with a custom PID control system, and parking with precision in any of the six designated zones.
+Our robot is powered by a Raspberry Pi 5 Model B, equipped with:
+A DC motor for propulsion,
 
-* `t-photos` contains 2 photos of the team (an official one and one funny photo with all team members)
-* `v-photos` contains 6 photos of the vehicle (from every side, from top and bottom)
-* `video` contains the video.md file with the link to a video where driving demonstration exists
-* `schemes` contains one or several schematic diagrams in form of JPEG, PNG or PDF of the electromechanical components illustrating all the elements (electronic components and motors) used in the vehicle and how they connect to each other.
-* `src` contains code of control software for all components which were programmed to participate in the competition
-* `models` is for the files for models used by 3D printers, laser cutting machines and CNC machines to produce the vehicle elements. If there is nothing to add to this location, the directory can be removed.
-* `other` is for other files which can be used to understand how to prepare the vehicle for the competition. It may include documentation how to connect to a SBC/SBM and upload files there, datasets, hardware specifications, communication protocols descriptions etc. If there is nothing to add to this location, the directory can be removed.
+1. A servo motor for steering,
 
-## Introduction
+2. Three ultrasonic sensors for spatial awareness,
+
+3. camera support for vision-based development.
+
+
+This repo contains all our code, schematics, planning documentation, and media that showcase our journey from concept to competition.
+
+We are Team NEO NEXUS future-focused, logic-driven, and proudly engineered for the WRO world stage.
+
