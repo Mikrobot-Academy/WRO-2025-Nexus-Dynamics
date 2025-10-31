@@ -7,17 +7,16 @@ Welcome to the official repository of Team NEO NEXUS, proudly representing Mikro
 Our mission:
 ============
 To design and build a fully autonomous vehicle capable of navigating a dynamic arena, completing three full laps in both clockwise and anticlockwise directions, detecting walls, handling corners with a custom PID control system, and parking with precision in any of the six designated zones.
-Our robot is powered by a Raspberry Pi 5 Model B, equipped with:
-A DC motor for propulsion,
 
-1. A servo motor for steering,
+## Overview of our repository 📜
+* `schemes`- contains the circuit diagram.
+* `models` - includes all the 3d printed parts of the robot that will go to the international.
+* `others`-  This is for other files which can be used to understand the making of the vehicle. 
+* `src` - the codes for both challenges, with and without obstacles.
+* `t-photos` - photos of the team one formal and a funny one.
+* `v-photos` - photos of every angle of the robot.
+* `video` - the link to our youtube channel where you can see our robot in action completing both challenges.
+* `README.md` - Here's all our journey in the development of our robot here we explain every part of the robot making.
 
-2. Three ultrasonic sensors for spatial awareness,
-
-3. camera support for vision-based development.
-
-
-This repo contains all our code, schematics, planning documentation, and media that showcase our journey from concept to competition.
 
 We are Team NEXUS DYNAMICS future-focused, logic-driven, and proudly engineered for the WRO world stage.
-
