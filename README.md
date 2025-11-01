@@ -19,6 +19,9 @@ To design and build a fully autonomous vehicle capable of navigating a dynamic a
 * `README.md` - Here's all our journey in the development of our robot here we explain every part of the robot making.
 
 
-We are Team NEXUS DYNAMICS future-focused, logic-driven, and proudly engineered for the WRO world stage.
+We are Team NEXUS DYNAMICS
+EXUS DYNAMICS future-focused, logic-driven, and proudly engineered for the WRO world stage.
 
-|[RaspberryPi 5 x1](https://https://www.raspberrypi.com/products/raspberry-pi-5/)|
+| <img src="https://github.com/user-attachments/assets/d3bbbc94-1d77-4a10-b388-3a382ea46a10" width="200"/> |
+| :------------: |
+| Raspberry Pi 5 x1 |
