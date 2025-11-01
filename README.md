@@ -7,11 +7,11 @@ Welcome to the official repository of Team NEXUS DYANMICS, proudly representing 
 
 ## Overview of our repository 📜
 * `schemes`- contains the circuit diagram.
-* `models` - includes all the 3d printed parts of the robot that will go to the international.
+* `models` - includes all the 3d printed parts of the robot.
 * `others`-  This is for other files which can be used to understand the making of the vehicle. 
-* `src` - the codes for both challenges, with and without obstacles.
+* `src` - the codes for both challenges.
 * `t-photos` - photos of the team one formal and a funny one.
-* `v-photos` - photos of every angle of the robot.
+* `v-photos` - photos of the robot.
 * `video` - the link to our youtube channel where you can see our robot in action completing both challenges.
 * `README.md` - Here's all our journey in the development of our robot here we explain every part of the robot making.
 
@@ -30,3 +30,15 @@ A list of all the electrical and mechanical components in the robot.
 | <img width="200" src="https://github.com/user-attachments/assets/c2b60d16-a2de-4dc1-843e-174c5aca7a27" /> | <img width="200" src="https://github.com/user-attachments/assets/0a98dfb7-4dd8-4513-bf5d-a83f09e9cb15" /> | <img width="200" src="https://github.com/user-attachments/assets/38586082-cbe9-4d74-bf22-e17e035c0b51" /> |
 | :------------: | :------------: | :------------: |
 | [LiPo Battery x1](https://www.hobbyrc.co.uk/gnb-2200mah-3s-110c-lipo-battery) | [Push Button x1](https://www.chinadaier.com/kd4-21-dpst-push-button-switch/) | [Jumper Wires x24](https://www.daakyetech.com/store/jumper-wires-40-20/) |
+
+
+## Photos 📸
+|
+| :---------------: | :-----------: | :---------: |
+|
+
+
+## Circuit Diagram 
+<p align=center>
+  <img src="https://github.com/user-attachments/assets/21a8bdb8-18d8-4cc3-a5e4-cff36a678d26" alt="Schematic" width="500"/>
+</p>
