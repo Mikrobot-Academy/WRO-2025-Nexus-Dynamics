@@ -31,14 +31,3 @@ A list of all the electrical and mechanical components in the robot.
 | :------------: | :------------: | :------------: |
 | [LiPo Battery x1](https://www.hobbyrc.co.uk/gnb-2200mah-3s-110c-lipo-battery) | [Push Button x1](https://www.chinadaier.com/kd4-21-dpst-push-button-switch/) | [Jumper Wires x24](https://www.daakyetech.com/store/jumper-wires-40-20/) |
 
-
-## Photos 📸
-|
-| :---------------: | :-----------: | :---------: |
-|
-
-
-## Circuit Diagram 
-<p align=center>
-  <img src="https://github.com/user-attachments/assets/21a8bdb8-18d8-4cc3-a5e4-cff36a678d26" alt="Schematic" width="500"/>
-</p>
