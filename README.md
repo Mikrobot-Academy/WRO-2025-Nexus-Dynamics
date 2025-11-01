@@ -44,6 +44,17 @@ This circuit diagram represents the connections of our robotic system.
 <br></br>
 ---
 
+
+## Robot Photos 📸
+| <img src="https://github.com/user-attachments/assets/0617c0fc-2120-489a-832b-4bb3aa1f7d46" width="270" alt="Top" /> | <img src="https://github.com/user-attachments/assets/d6911a03-71c9-4f97-83f1-c4225fc712f9" alt="Right" width="270"/> | <img src="https://github.com/user-attachments/assets/0e628e8a-256b-4e8c-b257-f839c9fc83b9" alt="Front" width="270"/>
+| :------------: | :------------: | :------------: |
+| Top       | Right        | Front       |
+| <img src="https://github.com/user-attachments/assets/7943466b-ff11-4398-a772-cc1a77d0d420" width="270" alt="Left"/> | <img src="https://github.com/user-attachments/assets/9727a26b-9c81-431b-9bb8-67605aea3c47" alt="Back" width="270"/>| <img alt="Bottom" src="https://github.com/user-attachments/assets/75fb4978-209d-4018-8544-fdebf3c1bdb7" width="270" /> |
+| Left       | Back       | Bottom       |
+
+<br></br>
+---
+
 ## Raspberry Pi Robot Code Explanation (Obstacle Challenge)
 
 ---
