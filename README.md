@@ -4,9 +4,6 @@ Welcome to the official repository of Team NEXUS DYANMICS, proudly representing 
 
 ![image](https://github.com/user-attachments/assets/aaf8859e-a785-4ffc-8ddb-c9662de4f2f8)                   ![image](https://github.com/user-attachments/assets/8abd6526-0eed-4adb-95cb-b1cffd24fcd1)
 
-Our mission:
-============
-To design and build a fully autonomous vehicle capable of navigating a dynamic arena, completing three full laps in both clockwise and anticlockwise directions, detecting walls, handling corners with a custom PID control system, and parking with precision in any of the six designated zones.
 
 ## Overview of our repository 📜
 * `schemes`- contains the circuit diagram.
