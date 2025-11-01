@@ -40,3 +40,159 @@ A list of all the electrical and mechanical components in the robot.
 </p>
 
 This circuit diagram represents the connections of our robotic system.
+
+<br></br>
+---
+
+## Raspberry Pi Robot Code Explanation (Obstacle Challenge)
+
+---
+
+### Library Imports & GPIO Mode
+
+```python
+import RPi.GPIO as GPIO
+import time
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
+```
+
+- `RPi.GPIO` lets the Raspberry Pi communicate with motors, servos, sensors, etc.
+- `time` is used for delays while reading sensors and controlling motors.
+- `GPIO.setmode(GPIO.BCM)` uses the GPIO pin numbering based on the Broadcom chip, not physical pin numbers.
+- `GPIO.setwarnings(False)` hides warnings if GPIO was used before.
+
+---
+
+### Button Setup (to select mode)
+
+```python
+BUTTON_PIN = 12
+GPIO.setup(BUTTON_PIN, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+```
+
+- Button is connected to GPIO 12
+- Internal resistor is set to Pull-Down → button reads 0 until pressed
+
+This button decides whether the robot runs **Right-wall** or **Left-wall** mode.
+
+---
+
+### Two Main Modes
+
+| Code Function | Wall followed | Sensor pins | PID Tuning | Speed Setting |
+|--------------|---------------|-------------|------------|--------------|
+| `run_right_wall()` | Right wall | TRIG=7, ECHO=16 | Kd = 0.2 | 75% |
+| `run_left_wall()` | Left wall | TRIG=25, ECHO=8 | Kd = 0.4 | 65% |
+
+Different tuning because:
+- Sensor placement and servo direction are opposite each side
+- Gives smoother driving when tuned separately
+
+---
+
+### Ultrasonic Distance Measurement
+
+```python
+def read_distance():
+    GPIO.output(TRIG, False)
+    time.sleep(0.00001)
+    GPIO.output(TRIG, True)
+    time.sleep(0.00001)
+    GPIO.output(TRIG, False)
+
+    # Echo timing calculation here...
+    duration = pulse_end - pulse_start
+    distance = round(duration * 17150, 2)
+```
+
+- Calculates distance using time of sound returning
+- `distance (cm) = duration × 17150`
+- Returns `None` if ultrasonic reading fails
+
+Used for detecting walls and corners.
+
+---
+
+### PID Steering Control
+
+```python
+Kp, Ki, Kd = 6, 0, 0.2
+error = setpoint - d
+correction = Kp*error + Ki*integral + Kd*derivative
+servo_angle = 90 + correction
+```
+
+- Target distance from wall = 20 cm
+- Too far → turn towards the wall
+- Too close → turn away
+
+Servo movement limits:
+
+```python
+angle = max(60, min(120, angle))
+```
+
+Prevents over-steering.
+
+---
+
+### Motor Control
+
+```python
+motor_pwm.ChangeDutyCycle(speed)
+GPIO.output(IN1, True)
+GPIO.output(IN2, False)
+```
+
+- PWM controls speed
+- Direction pins choose forward/backward movement
+
+Forward, stop, and corner manoeuvres controlled here.
+
+---
+
+### Corner Detection
+
+```python
+if d > 100 or d < 0:
+    print("Wall lost, corner")
+    approach_wall()
+    corner_count += 1
+```
+
+- If no wall detected → robot guesses corner
+- Turns and realigns with next wall
+- Stops after max corners reached (full lap)
+
+---
+
+### Mode Selection (Button Presses)
+
+```python
+wait_for_press_release()
+...
+if presses == 1:
+    run_right_wall()
+elif presses == 2:
+    run_left_wall()
+```
+
+- 1 press → Right-wall mode
+- 2 presses → Left-wall mode (within 2 seconds)
+
+Small but very useful interface.
+
+---
+
+### Cleanup
+
+```python
+GPIO.cleanup()
+```
+
+- Releases GPIO pins cleanly
+- Prevents Raspberry Pi crashes next time script runs
+
+---
