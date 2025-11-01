@@ -1,6 +1,6 @@
 Team  NEXUS DYNAMICS – WRO 2025 Future Engineers
 ===========================================
-Welcome to the official repository of Team NEO NEXUS, proudly representing Mikrobot Academy from Ghana in the WRO 2025 Future Engineers category.
+Welcome to the official repository of Team NEXUS DYANMICS, proudly representing Mikrobot Academy from Ghana in the WRO 2025 Future Engineers category.
 
 ![image](https://github.com/user-attachments/assets/aaf8859e-a785-4ffc-8ddb-c9662de4f2f8)                   ![image](https://github.com/user-attachments/assets/8abd6526-0eed-4adb-95cb-b1cffd24fcd1)
 
@@ -20,3 +20,5 @@ To design and build a fully autonomous vehicle capable of navigating a dynamic a
 
 
 We are Team NEXUS DYNAMICS future-focused, logic-driven, and proudly engineered for the WRO world stage.
+
+|[RaspberryPi 5 x1](https://https://www.raspberrypi.com/products/raspberry-pi-5/)|
