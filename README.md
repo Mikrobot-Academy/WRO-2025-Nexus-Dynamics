@@ -55,7 +55,7 @@ This circuit diagram represents the connections of our robotic system.
 <br></br>
 ---
 
-## Raspberry Pi Robot Code Explanation (Obstacle Challenge)
+## Raspberry Pi Robot Code Explanation (Open Challenge)
 
 ---
 
