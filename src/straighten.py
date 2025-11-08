@@ -19,7 +19,7 @@ def set_angle(angle):
 
 try:
     print("Setting servo to straight (90°)...")
-    set_angle(90)
+    set_angle(130)
     input("Press Enter to quit...")
 
 finally:

@@ -14,8 +14,8 @@ def run_right_wall():
     print("▶▶ Running RIGHT wall code...")
 
     # === GPIO SETUP ===
-    TRIG = 7
-    ECHO = 16
+    TRIG = 23
+    ECHO = 24
     SERVO_PIN = 18
     ENA = 22
     IN1 = 17
@@ -34,8 +34,8 @@ def run_right_wall():
     GPIO.output(IN2, False)
 
     # PID constants
-    Kp, Ki, Kd = 6, 0, 0.2
-    setpoint = 20
+    Kp, Ki, Kd = 4.5, 0, 0.3
+    setpoint = 35
     last_error, integral = 0, 0
     corner_count, max_corners = 0, 12
 
@@ -61,8 +61,8 @@ def run_right_wall():
         return None
 
     def set_servo_angle(angle):
-        angle = max(60, min(120, angle))
-        duty = 2 + (angle / 18)
+        angle = max(40, min(130, angle))
+        duty = 2 + ((180-angle) / 18)
         servo_pwm.ChangeDutyCycle(duty)
         print(f"Servo → {angle:.2f}°")
 
@@ -73,14 +73,14 @@ def run_right_wall():
         set_servo_angle(90)
         print("🚦 Stopped")
 
-    def start_robot(speed=75):
+    def start_robot(speed=90):
         motor_pwm.ChangeDutyCycle(speed)
         GPIO.output(IN1, True)
         GPIO.output(IN2, False)
         print(f"🚀 Forward {speed}")
 
     def approach_wall():
-        set_servo_angle(60)
+        set_servo_angle(40)
         start_robot(74)
         while True:
             d = read_distance()
@@ -88,13 +88,13 @@ def run_right_wall():
                 stop_robot()
                 print(f"✅ Found wall {d:.2f}cm")
                 break
-            time.sleep(0.02)
+            time.sleep(0.009)
 
     try:
         while corner_count < max_corners:
             d = read_distance()
             if d is None: continue
-            if d > 100 or d < 0:
+            if d > 70 or d < 0:
                 start_time = time.perf_counter()
                 stop_robot()
                 print(f"⚠️ Wall lost, corner {corner_count+1}")
@@ -188,7 +188,7 @@ def run_left_wall():
         set_servo_angle(90)
         print("🚦 Stopped")
 
-    def start_robot(speed=65):
+    def start_robot(speed=100):
         motor_pwm.ChangeDutyCycle(speed)
         GPIO.output(IN1, True)
         GPIO.output(IN2, False)

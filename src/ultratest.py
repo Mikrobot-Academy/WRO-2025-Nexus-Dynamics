@@ -2,8 +2,8 @@ import RPi.GPIO as GPIO
 import time
 
 # === Pin setup ===
-TRIG = 7
-ECHO = 16
+TRIG = 23
+ECHO = 24
 
 GPIO.setmode(GPIO.BCM)  # Use BCM numbering
 GPIO.setup(TRIG, GPIO.OUT)
