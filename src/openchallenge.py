@@ -34,7 +34,7 @@ def run_right_wall():
     GPIO.output(IN2, False)
 
     # PID constants
-    Kp, Ki, Kd = 4.5, 0, 0.3
+    Kp, Ki, Kd = 3.5, 0, 0.45
     setpoint = 35
     last_error, integral = 0, 0
     corner_count, max_corners = 0, 12
