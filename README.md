@@ -86,8 +86,6 @@ GPIO.setup(BUTTON_PIN, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 - Button is connected to GPIO 12
 - Internal resistor is set to Pull-Down → button reads 0 until pressed
 
-This button decides whether the robot runs **Right-wall** or **Left-wall** mode.
-
 ---
 
 ### Two Main Modes
@@ -176,24 +174,6 @@ if d > 100 or d < 0:
 - If no wall detected → robot guesses corner
 - Turns and realigns with next wall
 - Stops after max corners reached (full lap)
-
----
-
-### Mode Selection (Button Presses)
-
-```python
-wait_for_press_release()
-...
-if presses == 1:
-    run_right_wall()
-elif presses == 2:
-    run_left_wall()
-```
-
-- 1 press → Right-wall mode
-- 2 presses → Left-wall mode (within 2 seconds)
-
-Small but very useful interface.
 
 ---
 
